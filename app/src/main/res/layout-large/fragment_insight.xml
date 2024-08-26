@@ -46,64 +46,10 @@
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
-                android:paddingStart="164dp"
-                android:paddingEnd="164dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <!--<androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/insight_recycler_container"
-                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="left|center"
-                android:background="?attr/colorPrimaryContainer"
-                android:paddingHorizontal="@dimen/_10sdp"
-                tools:itemCount="1"
-                tools:listitem="@layout/item_recycler_stories_insight" />-->
-
-            <!--<com.google.android.material.card.MaterialCardView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="@dimen/_15sdp"
-                android:layout_marginBottom="@dimen/_20sdp"
-                app:cardCornerRadius="0dp"
-                app:strokeWidth="0dp">
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="bottom|center"
-                    android:layout_marginBottom="@dimen/_2sdp"
-                    android:elevation="@dimen/_100sdp"
-                    android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <ImageView
-                        android:layout_width="@dimen/_8sdp"
-                        android:layout_height="@dimen/_8sdp"
-                        android:src="@drawable/ic_seen"
-                        app:tint="@color/txt_white" />
-
-                    <TextView
-                        android:id="@+id/insight_story_no_view"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:text="718"
-                        android:textColor="@color/txt_white"
-                        android:textSize="@dimen/_10ssp"
-                        android:textStyle="bold" />
-                </LinearLayout>
-
-                <ImageView
-                    android:id="@+id/story_image_view3"
-                    android:layout_width="@dimen/_60sdp"
-                    android:layout_height="@dimen/_106sdp"
-                    android:scaleType="centerCrop"
-                    android:src="@drawable/img_sample" />
-
-            </com.google.android.material.card.MaterialCardView>-->
-
+                android:paddingStart="144dp"
+                android:paddingEnd="144dp"/>
         </FrameLayout>
     </LinearLayout>
 

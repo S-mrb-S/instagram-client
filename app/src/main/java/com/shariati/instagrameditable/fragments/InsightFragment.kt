@@ -10,15 +10,12 @@ import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
-import androidx.viewpager2.widget.CompositePageTransformer
-import androidx.viewpager2.widget.MarginPageTransformer
-import androidx.viewpager2.widget.ViewPager2
 import com.shariati.instagrameditable.R
 import com.shariati.instagrameditable.adapters.ImagePagerAdapter
 import com.shariati.instagrameditable.adapters.InsightStoryAdapter
 import com.shariati.instagrameditable.databinding.FragmentInsightBinding
+import com.shariati.instagrameditable.fragments.insight.CustomPageTransformer
 import com.shariati.instagrameditable.models.StoriesResponse
-import com.shariati.instagrameditable.utils.DepthPageTransformer
 import dagger.hilt.android.AndroidEntryPoint
 import ir.mahozad.android.PieChart
 import kotlin.random.Random
@@ -278,7 +275,7 @@ class InsightFragment : Fragment(), InsightStoryAdapter.InsightEvents {
         adapter = ImagePagerAdapter(list, requireContext(), binding.viewPager)
 
         binding.viewPager.adapter = adapter
-        binding.viewPager.offscreenPageLimit = 4
+        binding.viewPager.offscreenPageLimit = adapter.itemCount // همه صفحات را در کش نگه میدارد
         binding.viewPager.clipChildren = false
         binding.viewPager.clipToPadding = false
         binding.viewPager.setCurrentItem(position, false)
@@ -291,18 +288,3 @@ class InsightFragment : Fragment(), InsightStoryAdapter.InsightEvents {
     override fun setPostSize(story: ImageView, position: Int, storyReachedContainer: FrameLayout) {
     }
 }
-
-class CustomPageTransformer : ViewPager2.PageTransformer {
-    override fun transformPage(page: View, position: Float) {
-        val scaleFactor = 0.8f + (1 - Math.abs(position)) * 0.2f
-
-        // تغییر مقیاس
-        page.scaleX = scaleFactor
-        page.scaleY = scaleFactor
-
-        // اطمینان از اینکه صفحه همیشه قابل مشاهده است
-        page.visibility = if (position < -1 || position > 1) View.INVISIBLE else View.VISIBLE
-    }
-}
-
-
