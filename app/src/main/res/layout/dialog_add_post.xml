@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/_15sdp"
+    app:cardElevation="10dp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorPrimaryContainer">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/dialog_add_post_text_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="choose your post image"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textAlignment="center"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dialog_add_highlight_show_image"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_gravity="center"
+    android:backgroundTint="?attr/colorPrimary"
+            app:cardElevation="0dp"
+            android:layout_marginTop="@dimen/_13sdp"
+            style="@style/Widget.Material3.CardView.Outlined"
+            >
+            <ImageView
+                android:id="@+id/item_post_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_upload"
+                />
+        </com.google.android.material.card.MaterialCardView>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+            <RadioGroup
+                android:id="@+id/post_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/post_pin"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="pin"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/post_reels"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="reels"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/post_slide"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="slide"/>
+            <com.google.android.material.radiobutton.MaterialRadioButton
+                android:id="@+id/post_video"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="video"/>
+            </RadioGroup>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_add_post_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_add_post_confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

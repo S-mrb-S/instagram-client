@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/_15sdp"
+    app:cardElevation="10dp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorPrimaryContainer">
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+<TextView
+    android:id="@+id/dialog_set_text_description"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:text="please choose your user name"
+    android:fontFamily="@font/roboto_bold"
+    android:textSize="@dimen/_18ssp"
+    android:layout_marginTop="@dimen/_15sdp"
+    android:textColor="?attr/colorOnPrimary"
+    android:textAlignment="center"/>
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_height="wrap_content"
+        android:hint="write here.....">
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/dialog_set_text_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_set_text_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_set_text_confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

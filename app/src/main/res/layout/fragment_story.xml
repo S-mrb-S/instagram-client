@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_6sdp"
+        android:elevation="@dimen/_2sdp"
+        android:orientation="horizontal"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:visibility="visible"
+        android:weightSum="5"
+        app:layout_constraintBottom_toTopOf="@id/story_profile_icon_container"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <com.genius.multiprogressbar.MultiProgressBar
+            android:id="@+id/mpb_main"
+            android:layout_width="match_parent"
+            android:layout_height="2.6dp"
+            app:progressLineColor="@color/gray_500"
+            app:progressColor="@color/white"
+            app:progressSteps="9"
+            app:progressSingleDisplayedTime="5.0" />
+
+       <!--  <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            app:dividerColor="@color/txt_white" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            app:dividerColor="@color/txt_white" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            app:dividerColor="@color/gray_500" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            app:dividerColor="@color/gray_500" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:layout_weight="1"
+            app:dividerColor="@color/gray_500" />-->
+
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/story_image_container"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="@dimen/_60sdp"
+        app:cardCornerRadius="@dimen/_8sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/story_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:transitionName="testt" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/story_profile_icon_container"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="@dimen/_28sdp"
+        android:layout_height="@dimen/_28sdp"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/story_image_container"
+        app:strokeWidth="0dp">
+
+        <ImageView
+            android:id="@+id/story_profile_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_profile_avatar" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/story_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:fontFamily="@font/roboto_bold"
+        android:maxLength="16"
+        android:text="5 November 2023"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toRightOf="@id/story_profile_icon_container"
+        app:layout_constraintTop_toTopOf="@id/story_profile_icon_container" />
+
+    <TextView
+        android:id="@+id/story_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_light"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_11ssp"
+        app:layout_constraintLeft_toRightOf="@id/story_date"
+        app:layout_constraintTop_toTopOf="@id/story_date" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_4sdp"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toLeftOf="@id/story_date"
+        app:layout_constraintTop_toBottomOf="@id/story_date">
+
+        <ImageView
+            android:layout_width="@dimen/_9sdp"
+            android:layout_height="@dimen/_9sdp"
+            android:src="@drawable/ic_comment"
+            app:tint="@color/txt_white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_4sdp"
+            android:fontFamily="@font/roboto_bold"
+            android:text="See Translation"
+            android:textColor="@color/txt_white"
+            android:textSize="@dimen/_9ssp" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/story_more_icon"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_25sdp"
+        android:src="@drawable/ic_dots"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/story_image_container"
+        app:tint="@color/txt_white" />
+
+    <TextView
+        android:id="@+id/story_more_icon_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/roboto_light"
+        android:text="More"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintLeft_toLeftOf="@id/story_more_icon"
+        app:layout_constraintRight_toRightOf="@id/story_more_icon"
+        app:layout_constraintTop_toBottomOf="@id/story_more_icon" />
+
+    <ImageView
+        android:id="@+id/story_highlight_icon"
+        android:layout_width="@dimen/_21sdp"
+        android:layout_height="@dimen/_21sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:src="@drawable/ic_highlight"
+        app:layout_constraintBottom_toBottomOf="@id/story_more_icon"
+        app:layout_constraintRight_toRightOf="@id/story_more_icon"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon"
+        app:tint="@color/txt_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Highlight"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintLeft_toLeftOf="@id/story_highlight_icon"
+        app:layout_constraintRight_toRightOf="@id/story_highlight_icon"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon_text" />
+
+    <ImageView
+        android:id="@+id/story_share_icon"
+        android:layout_width="@dimen/_18sdp"
+        android:layout_height="@dimen/_18sdp"
+        android:layout_marginRight="@dimen/_55sdp"
+        android:src="@drawable/ic_trend"
+        app:layout_constraintBottom_toBottomOf="@id/story_more_icon"
+        app:layout_constraintRight_toRightOf="@id/story_highlight_icon"
+
+        app:layout_constraintTop_toBottomOf="@id/story_image_container"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon"
+        app:tint="@color/txt_white" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto_light"
+        android:text="Boost"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintLeft_toLeftOf="@id/story_share_icon"
+        app:layout_constraintRight_toRightOf="@id/story_share_icon"
+        app:layout_constraintTop_toBottomOf="@id/story_share_icon"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon_text"
+
+        />
+
+    <View
+        android:id="@+id/go_to_insight"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintBottom_toBottomOf="@id/activity_text"
+        app:layout_constraintLeft_toLeftOf="@id/story_profile_icon_viewer1"
+        app:layout_constraintRight_toRightOf="@id/story_profile_icon_viewer3"
+        app:layout_constraintTop_toBottomOf="@id/story_image_container" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/story_profile_icon_viewer1"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/_2sdp"
+
+        >
+
+        <ImageView
+            android:id="@+id/story_profile_icon_viewer1_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_profile_avatar" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/story_profile_icon_viewer2"
+        style="@style/Widget.Material3.CardView.Filled"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/story_profile_icon_viewer1"
+        app:layout_constraintTop_toTopOf="@id/story_profile_icon_viewer1"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/_2sdp"
+
+        >
+
+        <ImageView
+            android:id="@+id/story_profile_icon_viewer2_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_profile_avatar" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/story_profile_icon_viewer3"
+        style="@style/Widget.Material3.CardView.Outlined"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:layout_marginLeft="20dp"
+        app:cardCornerRadius="100dp"
+        app:cardElevation="0dp"
+        app:layout_constraintLeft_toLeftOf="@id/story_profile_icon_viewer2"
+        app:layout_constraintTop_toTopOf="@id/story_profile_icon_viewer2"
+        app:strokeColor="@color/black"
+        app:strokeWidth="@dimen/_2sdp"
+
+        >
+
+        <ImageView
+            android:id="@+id/story_profile_icon_viewer3_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img_profile_avatar" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <TextView
+        android:id="@+id/activity_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:fontFamily="@font/roboto_light"
+        android:text="Activity"
+        android:textColor="@color/txt_white"
+        android:textSize="@dimen/_9ssp"
+        app:layout_constraintLeft_toLeftOf="@id/story_profile_icon_viewer1"
+        app:layout_constraintRight_toRightOf="@id/story_profile_icon_viewer3"
+        app:layout_constraintTop_toBottomOf="@id/story_share_icon"
+        app:layout_constraintTop_toTopOf="@id/story_more_icon_text"
+
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

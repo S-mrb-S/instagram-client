@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uploader Buttons</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        .uploader-container {
+            text-align: center;
+        }
+
+        .uploader-button:nth-child(even) {
+            display: inline-block;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #3498db;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            cursor: pointer;
+            width: calc(100% - 20px); /* عرض دکمه برابر با عرض صفحه با مارجین افقی 10px */
+        }
+        .uploader-button:nth-child(odd) {
+            display: inline-block;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            text-decoration: none;
+            color: #fff;
+            background-color: #db3455;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+            cursor: pointer;
+            width: calc(100% - 20px); /* عرض دکمه برابر با عرض صفحه با مارجین افقی 10px */
+        }
+
+        .uploader-button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="uploader-container">
+        <a href="https://www.uplooder.net/" class="uploader-button">Uploader1</a>
+        <a href="https://biaupload.com/" class="uploader-button">Uploader2</a>
+        <a href="https://uploadkon.ir/  " class="uploader-button">Uploader3</a>
+        <a href="https://imgurl.ir/" class="uploader-button">Uploader4</a>
+        <a href="https://up.20script.ir/" class="uploader-button">Uploader5</a>
+        <a href="https://img7.ir/" class="uploader-button">Uploader6</a>
+    </div>
+</body>
+</html>

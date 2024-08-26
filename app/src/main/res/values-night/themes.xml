@@ -1,0 +1,20 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.InstagramEditable" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorSurface">@color/black</item>
+        <item name="colorOnSurface">@color/txt_white</item>
+        <item name="colorOnSurfaceVariant">@color/white</item>
+
+        <item name="colorPrimary">@color/gray_700</item>
+        <item name="colorOnPrimary">@color/txt_white</item>
+        <item name="colorPrimaryVariant">@color/gray_500</item>
+        <item name="colorPrimaryContainer">@color/gray_800</item>
+<item name="colorSecondary">@color/story_color_dark</item>
+<item name="colorSurfaceContainerHigh">@color/gray_650</item>
+        <item name="android:statusBarColor">?attr/colorSurface</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:fontFamily">@font/roboto_light</item>
+    </style>
+</resources>

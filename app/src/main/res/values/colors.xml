@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="gray_800">#1a1a1a</color>
+    <color name="gray_700">#262626</color>
+    <color name="gray_650">#737373</color>
+    <color name="gray_600">#999999</color>
+    <color name="gray_500">#a8a8a8</color>
+    <color name="gray_200">#e3f1fe</color>
+    <color name="gray_100">#efefef</color>
+    <color name="story_color_dark">#363636</color>
+    <color name="story_color_light">#dbdbdb</color>
+
+    <color name="red_badge">#ea4549</color>
+    <color name="blue">#4293ef</color>
+    <color name="blue_darker">#143666</color>
+    <color name="txt_white">#f5f5f5</color>
+</resources>

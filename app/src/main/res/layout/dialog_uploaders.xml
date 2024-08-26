@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/_15sdp"
+    app:cardElevation="10dp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorPrimaryContainer">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" android:gravity="center">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/uploader1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploader1"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/roboto_bold"/>
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/uploader2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Uploader2"
+            android:textSize="@dimen/_15ssp"
+            android:fontFamily="@font/roboto_bold"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploader3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploader3"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto_bold"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploader4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploader4"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto_bold"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploader5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploader5"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto_bold"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/uploader6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Uploader6"
+        android:textSize="@dimen/_15ssp"
+        android:fontFamily="@font/roboto_bold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_cancel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+
+        </LinearLayout>
+</LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

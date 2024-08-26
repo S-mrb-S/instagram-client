@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Instagram+</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="text">Manage your connected experiences and account settings across Meta technologies. <font
+        color="#4293ef"> Learn more</font></string>
+</resources>

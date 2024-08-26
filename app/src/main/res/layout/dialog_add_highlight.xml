@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:contentPadding="@dimen/_15sdp"
+    app:cardElevation="10dp"
+    android:layout_marginHorizontal="@dimen/_15sdp"
+    style="@style/Widget.Material3.CardView.Filled"
+    android:backgroundTint="?attr/colorPrimaryContainer">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/dialog_add_highlight_text_view_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="write your highlight name"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textAlignment="center"/>
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_height="wrap_content"
+            android:hint="write highlight name">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/dialog_add_highlight_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                />
+        </com.google.android.material.textfield.TextInputLayout>
+        <TextView
+            android:id="@+id/dialog_add_highlight_text_view_image"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="choose your highlight image"
+            android:fontFamily="@font/roboto_bold"
+            android:textSize="@dimen/_18ssp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:textColor="?attr/colorOnPrimary"
+            android:textAlignment="center"/>
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dialog_add_highlight_show_image"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_56sdp"
+            android:layout_gravity="center"
+            app:strokeColor="?attr/colorPrimary"
+            app:strokeWidth="1dp"
+            app:cardElevation="0dp"
+            app:cardCornerRadius="100dp"
+            android:layout_marginTop="@dimen/_10sdp"
+            style="@style/Widget.Material3.CardView.Outlined"
+            >
+            <ImageView
+                android:id="@+id/item_highlight_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_profile_avatar"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_add_highlight_cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:layout_marginRight="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/dialog_add_highlight_confirm_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:textSize="@dimen/_15ssp"
+                android:fontFamily="@font/roboto_bold"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
