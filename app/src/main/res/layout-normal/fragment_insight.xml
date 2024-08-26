@@ -48,8 +48,8 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:paddingStart="144dp"
-                android:paddingEnd="144dp"/>
+                android:paddingStart="189dp"
+                android:paddingEnd="189dp"/>
         </FrameLayout>
     </LinearLayout>
 
