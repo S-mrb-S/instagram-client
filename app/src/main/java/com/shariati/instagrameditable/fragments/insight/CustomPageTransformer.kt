@@ -11,7 +11,7 @@ class CustomPageTransformer : ViewPager2.PageTransformer {
         page.scaleX = scaleFactor
         page.scaleY = scaleFactor
 
-        // اطمینان از اینکه صفحه همیشه قابل مشاهده است
-       // page.visibility = View.VISIBLE
+        // تنظیم موقعیت X برای نمایش درست آیتم‌ها
+        page.translationX = -position * page.width / 5   // تقسیم عرض به 5 برای نمایش 5 آیتم
     }
 }
