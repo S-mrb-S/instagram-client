@@ -14,7 +14,7 @@
         app:layout_constraintTop_toTopOf="parent"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.35">
+        app:layout_constraintHeight_percent="0.28">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -49,11 +49,11 @@
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
+                android:layout_gravity="center"
+                android:orientation="horizontal"
+                android:padding="40dp"
                 android:clipChildren="false"
-                android:paddingStart="189dp"
-                android:paddingEnd="189dp"
-                android:overScrollMode="never"/>
+                android:clipToPadding="false"/>
         </FrameLayout>
     </LinearLayout>
 

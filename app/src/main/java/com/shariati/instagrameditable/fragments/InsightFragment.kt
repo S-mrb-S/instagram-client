@@ -13,15 +13,16 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.shariati.instagrameditable.R
 import com.shariati.instagrameditable.adapters.ImagePagerAdapter
 import com.shariati.instagrameditable.adapters.InsightStoryAdapter
 import com.shariati.instagrameditable.databinding.FragmentInsightBinding
-import com.shariati.instagrameditable.fragments.insight.CustomPageTransformer
 import com.shariati.instagrameditable.models.StoriesResponse
 import dagger.hilt.android.AndroidEntryPoint
 import ir.mahozad.android.PieChart
+import kotlin.math.abs
 import kotlin.random.Random
 
 @AndroidEntryPoint
@@ -273,6 +274,23 @@ class InsightFragment : Fragment(), InsightStoryAdapter.InsightEvents {
         return storyArrayList
     }
 
+    fun ViewPager2.addCarouselEffect(enableZoom: Boolean = true) {
+        clipChildren = false    // No clipping the left and right items
+        clipToPadding = false   // Show the viewpager in full width without clipping the padding
+        offscreenPageLimit = 3  // Render the left and right items
+        (getChildAt(0) as RecyclerView).overScrollMode = RecyclerView.OVER_SCROLL_NEVER // Remove the scroll effect
+
+        val compositePageTransformer = CompositePageTransformer()
+        compositePageTransformer.addTransformer(MarginPageTransformer((20 * Resources.getSystem().displayMetrics.density).toInt()))
+        if (enableZoom) {
+            compositePageTransformer.addTransformer { page, position ->
+                val r = 1 - abs(position)
+                page.scaleY = (0.80f + r * 0.20f)
+            }
+        }
+        setPageTransformer(compositePageTransformer)
+    }
+
     fun Int.dpToPx(): Int {
         val density = Resources.getSystem().displayMetrics.density
         return (this * density).toInt()
@@ -283,37 +301,12 @@ class InsightFragment : Fragment(), InsightStoryAdapter.InsightEvents {
         adapter = ImagePagerAdapter(list, requireContext(), binding.viewPager)
 
         binding.viewPager.adapter = adapter
-        binding.viewPager.offscreenPageLimit = adapter.itemCount
-        binding.viewPager.clipChildren = false
-        binding.viewPager.clipToPadding = false
-//        binding.viewPager.setPadding((-position * 100).dpToPx(), 0, (-position * 100).dpToPx(), 0)
+        binding.viewPager.setPadding((165).dpToPx(), 0, (165).dpToPx(), 0)
         binding.viewPager.setCurrentItem(position, false)
-        //binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        binding.viewPager.getChildAt(0).overScrollMode = RecyclerView.OVER_SCROLL_NEVER
 
-        val transformer = CompositePageTransformer()
-        binding.viewPager.addItemDecoration(MarginItemDecoration(5))
-
-        transformer.addTransformer(ScalePageTransformer())
-
-        binding.viewPager.setPageTransformer(transformer)
+        binding.viewPager.addCarouselEffect(enableZoom = false)
     }
 
     override fun setPostSize(story: ImageView, position: Int, storyReachedContainer: FrameLayout) {
-    }
-}
-
-class ScalePageTransformer : ViewPager2.PageTransformer {
-    override fun transformPage(page: View, position: Float) {
-        val scaleFactor = 0.85f + (1 - Math.abs(position)) * 0.15f
-        page.scaleX = scaleFactor
-        page.scaleY = scaleFactor
-    }
-}
-
-class MarginItemDecoration(private val margin: Int) : RecyclerView.ItemDecoration() {
-    override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State) {
-        outRect.right = margin
-        outRect.left = margin
     }
 }
