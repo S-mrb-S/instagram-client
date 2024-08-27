@@ -7,13 +7,14 @@
 
     <LinearLayout
         android:id="@+id/insight_story_image_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:background="?attr/colorPrimaryContainer"
         android:orientation="vertical"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.35">
 
         <FrameLayout
             android:layout_width="match_parent"
@@ -42,14 +43,17 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="40dp">
 
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/viewPager"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:clipChildren="false"
                 android:paddingStart="189dp"
-                android:paddingEnd="189dp"/>
+                android:paddingEnd="189dp"
+                android:overScrollMode="never"/>
         </FrameLayout>
     </LinearLayout>
 
